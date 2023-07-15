@@ -15,7 +15,12 @@
 	<article class="flex-col felx-1 pt-8">
 		<a href="/blog">
 			<Box --width="94px" --translate="-4px" --border="1px" --padding="8px">
-				<svg slot="content" class="h-4" fill="none" stroke="currentColor" viewBox="0 0 35.7 16"
+				<svg
+					slot="content"
+					class="h-4 text-primary"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 35.7 16"
 					><path
 						stroke-width="3"
 						stroke-linecap="round"
@@ -26,7 +31,7 @@
 			</Box>
 		</a>
 
-		<h1 class="my-8 text-4xl font-tasaexplorer font-tasaexplorer-bold">
+		<h1 class="my-8 text-primary text-4xl font-tasaexplorer font-tasaexplorer-bold">
 			{data.meta.title}
 		</h1>
 
@@ -36,7 +41,7 @@
 			{/each}
 		</hgroup>
 
-		<p class="font-tasaorbiter text-xl font-tasaorbiter-regular mb-4">
+		<p class="font-tasaorbiter text-primary text-xl font-tasaorbiter-regular mb-4">
 			{data.meta.description}
 		</p>
 
@@ -45,7 +50,7 @@
 		</Box>
 
 		<div
-			class="mt-8 mx-auto max-w-3xl font-tasaexplorer text-base font-tasaexplorer-regular [&>p]:mb-4"
+			class="mt-8 mx-auto max-w-3xl font-tasaexplorer text-primary text-base font-tasaexplorer-regular [&>p]:mb-4"
 		>
 			<svelte:component this={data.content} />
 		</div>

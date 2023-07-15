@@ -2,15 +2,15 @@
 	import Container from '$lib/components/Container.svelte';
 </script>
 
-<Container customClass="h-screen bg-light">
-	<h1 class="mt-24 text-6xl uppercase font-tasaexplorer font-tasaexplorer-bold">
+<Container customClass="h-screen bg-secondary">
+	<h1 class="mt-24 text-6xl uppercase text-primary font-tasaexplorer font-tasaexplorer-bold">
 		escape your backend burdens
 	</h1>
 	<div class="mt-6 flex-1 justify-between items-start">
-		<p class="font-tasaorbiter text-lg font-tasaorbiter-medium mb-4">
+		<p class="font-tasaorbiter text-primary text-lg font-tasaorbiter-medium mb-4">
 			Encore orchestrates infrastructure for seamless development, from local to cloud.
 		</p>
-		<p class="font-tasaorbiter text-base font-tasaorbiter-regular">
+		<p class="font-tasaorbiter text-base text-primary font-tasaorbiter-regular">
 			Break free from manual work to run locally, costly shared test environments, and tedious
 			Terraform.
 		</p>
@@ -26,7 +26,7 @@
           font-tasaorbiter font-tasaorbiter-semibold
 
 
-          bg-black dark:bg-white text-white dark:text-black relative
+          bg-primary text-secondary relative
 
           transition-transform duration-100 ease-in-out
           group-active:-translate-x-1 group-active:-translate-y-1
@@ -40,7 +40,7 @@
 				>
 			</div>
 			<div class="h-12 inline-block group relative">
-				<div class="absolute inset-0 bg-black dark:bg-white" />
+				<div class="absolute inset-0 bg-primary" />
 				<button
 					type="button"
 					class="
@@ -48,7 +48,7 @@
           inline-flex justify-center items-center uppercase
           font-tasaorbiter font-tasaorbiter-semibold
 
-          bg-white dark:bg-black text-black dark:text-white border-2 border-black dark:border-white relative
+          bg-secondary text-primary border-2 border-primary relative
 
           transition-transform duration-100 ease-in-out
           group-active:-translate-x-1 group-active:-translate-y-1
@@ -65,8 +65,8 @@
 	</div>
 </Container>
 
-<Container customClass="bg-dark">
-	<h2 class="text-light my-12 text-5xl uppercase font-tasaexplorer font-tasaorbiter-black">
+<Container customClass="bg-primary">
+	<h2 class="text-secondary my-12 text-5xl uppercase font-tasaexplorer font-tasaorbiter-black">
 		Declarative infras
 	</h2>
 
@@ -78,7 +78,7 @@
 				alt="icon"
 			/>
 		</div>
-		<div class="flex-1 text-light">
+		<div class="flex-1 text-secondary">
 			<h3 class="font-tasaorbiter font-tasaorbiter-semibold mb-2 text-4xl">
 				Architecture Diagrame & API
 			</h3>
@@ -89,19 +89,19 @@
 	</div>
 </Container>
 
-<Container customClass="bg-light h-screen">
-	<h2 class="text-dark my-12 text-5xl uppercase font-tasaexplorer font-tasaexplorer-black">
+<Container customClass="bg-secondary h-screen">
+	<h2 class="text-primary my-12 text-5xl uppercase font-tasaexplorer font-tasaexplorer-black">
 		Never too late to evolve
 	</h2>
 
 	<div class="flex-1 relative">
-		<div class="elevated p-6 bg-light h-full border-4 border-dark flex flex-col gap-6">
-			<p class="text-lg uppercase">Incremental adoption</p>
-			<p class="text-lg">
+		<div class="elevated p-6 bg-secondary h-full border-4 border-primary flex flex-col gap-6">
+			<p class="text-lg uppercase text-primary">Incremental adoption</p>
+			<p class="text-lg text-primary">
 				Start using Encore for specific use cases, alongside your existing stack.
 			</p>
 			<div class="h-12 inline-block group relative">
-				<div class="absolute inset-0 bg-black dark:bg-white" />
+				<div class="absolute inset-0 bg-primary" />
 				<button
 					type="button"
 					class="
@@ -110,7 +110,7 @@
           font-tasaorbiter font-tasaorbiter-semibold
 
 
-          bg-white dark:bg-black text-black dark:text-white border-2 border-black dark:border-white relative
+          bg-secondary text-primary border-2 border-primary relative
 
           transition-transform duration-100 ease-in-out
           group-active:-translate-x-1 group-active:-translate-y-1
@@ -124,7 +124,7 @@
 				>
 			</div>
 		</div>
-		<div class="absolute inset-0 -z-10 bg-dark dark:bg-white" />
+		<div class="absolute inset-0 -z-10 bg-primary" />
 	</div>
 </Container>
 

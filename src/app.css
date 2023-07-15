@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	/* dark */
+	--brand-dark: #111111;
+
+	/* light */
+	--brand-light: #f3ffe5;
+}
+
+:root {
+	color-scheme: dark;
+
+	--color-primary: var(--brand-dark);
+	--color-secondary: var(--brand-light);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color-scheme: light;
+
+		--color-primary: var(--brand-light);
+		--color-secondary: var(--brand-dark);
+	}
+}
+
+[color-scheme='dark'] {
+	color-scheme: dark;
+
+	--color-primary: var(--brand-dark);
+	--color-secondary: var(--brand-light);
+}
+
+[color-scheme='light'] {
+	color-scheme: light;
+
+	--color-primary: var(--brand-light);
+	--color-secondary: var(--brand-dark);
+}
+
 @layer base {
 	@supports (font-variation-settings: normal) {
 		@font-face {

@@ -12,22 +12,22 @@
 
 <style lang="postcss">
 	.top {
-		background-color: theme(colors.dark);
+		background-color: theme(colors.primary);
 	}
 	.down {
 		transform: translate3d(0px, 5px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
 			rotateZ(-45deg) skew(0deg, 0deg);
 		transform-style: preserve-3d;
-		background-color: theme(colors.light);
+		background-color: theme(colors.secondary);
 	}
 
 	.bottom {
-		background-color: theme(colors.dark);
+		background-color: theme(colors.primary);
 	}
 	.up {
 		transform: translate3d(0px, -5px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
 			rotateZ(45deg) skew(0deg, 0deg);
 		transform-style: preserve-3d;
-		background-color: theme(colors.light);
+		background-color: theme(colors.secondary);
 	}
 </style>

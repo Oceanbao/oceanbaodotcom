@@ -2,9 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/oblogo-min-circle.png" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="%sveltekit.assets%/oblogo-min-circle.png" />
 		<link rel="alternate" type="application/atom+xml" href="/rss.xml" />
+		<script type="module">
+			const theme = localStorage.getItem('color-scheme');
+			theme
+				? document.documentElement.setAttribute('color-scheme', theme)
+				: localStorage.setItem('color-scheme', 'dark');
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

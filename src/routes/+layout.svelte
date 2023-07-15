@@ -14,8 +14,9 @@
 <style lang="postcss">
 	:global(body) {
 		height: 100%;
-		background-color: theme(colors.light);
+		background-color: theme(colors.secondary);
 		max-inline-size: 1440px;
 		margin-inline: auto;
+		transition: background-color 200ms ease-in-out;
 	}
 </style>

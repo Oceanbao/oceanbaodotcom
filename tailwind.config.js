@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				light: '#F3FFE5',
-				dark: '#111111',
+				primary: 'var(--color-primary)',
+				secondary: 'var(--color-secondary)',
 				magnum: {
 					50: '#fff9ed',
 					100: '#fef2d6',

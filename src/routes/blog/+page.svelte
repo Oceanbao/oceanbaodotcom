@@ -15,12 +15,14 @@
 </svelte:head>
 
 <Container>
-	<h2 class="text-dark my-12 text-5xl uppercase font-tasaexplorer font-tasaexplorer-bold">Blog</h2>
+	<h2 class="text-primary my-12 text-5xl uppercase font-tasaexplorer font-tasaexplorer-bold">
+		Blog
+	</h2>
 	<div class="mt-6 flex-1 justify-between items-start">
-		<p class="font-tasaorbiter text-lg font-tasaorbiter-medium mb-4">
+		<p class="font-tasaorbiter text-primary text-lg font-tasaorbiter-medium mb-4">
 			Encore orchestrates infrastructure for seamless development, from local to cloud.
 		</p>
-		<p class="font-tasaorbiter text-base font-tasaorbiter-regular">
+		<p class="font-tasaorbiter text-base text-primary font-tasaorbiter-regular">
 			Break free from manual work to run locally, costly shared test environments, and tedious
 			Terraform.
 		</p>
@@ -35,7 +37,7 @@
           inline-flex justify-center items-center uppercase
           font-tasaorbiter font-tasaorbiter-semibold
 
-          bg-black text-light relative
+          bg-primary text-secondary relative
 
           transition-transform duration-100 ease-in-out
           group-active:-translate-x-1 group-active:-translate-y-1
@@ -49,7 +51,7 @@
 				>
 			</div>
 			<div class="h-12 inline-block group relative">
-				<div class="absolute inset-0 bg-black" />
+				<div class="absolute inset-0 bg-primary" />
 				<button
 					type="button"
 					class="
@@ -57,7 +59,7 @@
           inline-flex justify-center items-center uppercase
           font-tasaorbiter font-tasaorbiter-semibold
 
-          bg-light text-black border-2 border-black relative
+          bg-secondary text-primary border-2 border-primary relative
 
           transition-transform duration-100 ease-in-out
           group-active:-translate-x-1 group-active:-translate-y-1

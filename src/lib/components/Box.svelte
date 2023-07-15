@@ -6,9 +6,9 @@
 </script>
 
 <div class="box relative {customClass}" class:active class:inactive>
-	<div class="back absolute inset-0 bg-black h-full -z-10" />
+	<div class="back absolute inset-0 bg-primary h-full -z-10" />
 	<div
-		class="front border-black bg-light transition-transform duration-100 ease-in-out flex flex-col"
+		class="front border-primary bg-secondary transition-transform duration-100 ease-in-out flex flex-col"
 	>
 		<slot name="content" />
 	</div>
