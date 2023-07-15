@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@supports (font-variation-settings: normal) {
+		@font-face {
+			font-family: 'TASA Explorer';
+			font-style: normal;
+			font-weight: 1 999;
+			font-display: swap;
+			src: url('/fonts/TASAExplorerVF.woff2') format('woff2-variations');
+		}
+		@font-face {
+			font-family: 'TASA Orbiter';
+			font-style: normal;
+			font-weight: 1 999;
+			font-display: swap;
+			src: url('/fonts/TASAOrbiterVF.woff2') format('woff2-variations');
+		}
+	}
+}
