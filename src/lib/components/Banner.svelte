@@ -31,15 +31,16 @@
 <svelte:window bind:scrollY={currentY} on:scroll={handleScroll} />
 
 <header
-	class="fixed top-0 left-0 w-screen flex flex-col z-30 banner transition-colors duration-200 ease-in-out"
-	class:headerOn={$headerOn === true}
+	class="{$headerOn
+		? 'surface-secondary'
+		: 'surface-primary'} fixed top-0 left-0 w-screen flex flex-col z-30 transition-colors duration-200 ease-in-out"
 	class:slide-in={isScrollUp}
 	class:slide-out={currentY !== 0 && !isScrollUp}
 >
 	<div
-		class="flex justify-between py-2 px-4"
-		class:border-headerOn={$headerOn}
-		class:border-headerOff={$headerOn === false}
+		class="flex justify-between py-2 px-4 {$headerOn
+			? 'border-solid border-b border-brand-primary'
+			: 'border-b-2 border-solid border-brand-secondary'}"
 	>
 		<a href="/"><img src="/oblogo-circle.png" alt="logo" width="48px" height="48px" /></a>
 		<ThemeToggle />
@@ -47,26 +48,15 @@
 	</div>
 
 	{#if $headerOn}
-		<nav class="bg-primary flex flex-col px-4" transition:slide>
-			<a class="nav-link text-secondary" href="/blog">Blog</a>
-			<a class="nav-link text-secondary" href="/blog">News</a>
-			<a class="nav-link text-secondary" href="/blog">Something</a>
+		<nav class="surface-secondary flex flex-col px-4" transition:slide>
+			<a class="py-4" href="/blog">Blog</a>
+			<a class="py-4" href="/blog">News</a>
+			<a class="py-4" href="/blog">Something</a>
 		</nav>
 	{/if}
 </header>
 
 <style lang="postcss">
-	.banner {
-		background-color: theme(colors.secondary);
-	}
-
-	.border-headerOff {
-		border-bottom: 2px solid theme(colors.primary);
-	}
-	.border-headerOn {
-		border-bottom: 1px solid theme(colors.secondary);
-	}
-
 	.slide-in {
 		animation: slide-in 0.5s forwards;
 	}
@@ -91,14 +81,5 @@
 		100% {
 			transform: translateY(-100%);
 		}
-	}
-
-	.headerOn {
-		background-color: theme(colors.primary);
-	}
-
-	.nav-link {
-		padding: 1rem 0;
-		background-color: theme(colors.primary);
 	}
 </style>

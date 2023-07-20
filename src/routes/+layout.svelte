@@ -2,21 +2,22 @@
 	import '../app.css';
 
 	import Banner from '$lib/components/Banner.svelte';
-	import Page from '$lib/components/Page.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <Banner />
 
-<Page>
+<main class="container mx-auto px-4">
 	<slot />
-</Page>
+</main>
+
+<Footer />
 
 <style lang="postcss">
 	:global(body) {
 		height: 100%;
-		background-color: theme(colors.secondary);
-		max-inline-size: 1440px;
-		margin-inline: auto;
+		color: theme('colors.brand-secondary');
+		background-color: theme('colors.brand-primary');
 		transition: background-color 200ms ease-in-out;
 	}
 </style>

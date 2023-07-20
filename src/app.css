@@ -8,36 +8,41 @@ html {
 
 	/* light */
 	--brand-light: #f3ffe5;
+
+	--theme-text-primary: var(--theme-secondary);
+	--theme-text-secondary: var(--theme-primary);
+	--theme-bg-primary: var(--theme-primary);
+	--theme-bg-secondary: var(--theme-secondary);
 }
 
 :root {
-	color-scheme: dark;
+	color-scheme: light;
 
-	--color-primary: var(--brand-dark);
-	--color-secondary: var(--brand-light);
+	--theme-primary: var(--brand-light);
+	--theme-secondary: var(--brand-dark);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 	:root {
-		color-scheme: light;
+		color-scheme: dark;
 
-		--color-primary: var(--brand-light);
-		--color-secondary: var(--brand-dark);
+		--theme-primary: var(--brand-dark);
+		--theme-secondary: var(--brand-light);
 	}
-}
-
-[color-scheme='dark'] {
-	color-scheme: dark;
-
-	--color-primary: var(--brand-dark);
-	--color-secondary: var(--brand-light);
 }
 
 [color-scheme='light'] {
 	color-scheme: light;
 
-	--color-primary: var(--brand-light);
-	--color-secondary: var(--brand-dark);
+	--theme-primary: var(--brand-light);
+	--theme-secondary: var(--brand-dark);
+}
+
+[color-scheme='dark'] {
+	color-scheme: dark;
+
+	--theme-primary: var(--brand-dark);
+	--theme-secondary: var(--brand-light);
 }
 
 @layer base {
@@ -56,5 +61,45 @@ html {
 			font-display: swap;
 			src: url('/fonts/TASAOrbiterVF.woff2') format('woff2-variations');
 		}
+	}
+}
+
+@layer utilities {
+	.surface-primary {
+		color: var(--theme-text-primary);
+		background-color: var(--theme-bg-primary);
+	}
+
+	.surface-secondary {
+		color: var(--theme-text-secondary);
+		background-color: var(--theme-bg-secondary);
+	}
+
+	.shifting-bg {
+		--tw-gradient-stops: #ff8719 0%, #4651ff 20.13%, #93c0ff 41.517%, #d4db00 61.635%,
+			#ffe87a 81.138%, #ff8719 100%;
+		--under-start-position: calc(150% - 0%);
+
+		background-size: 300% 300%;
+		animation: ScrollGradientXY 45s linear infinite;
+		background-image: linear-gradient(to right, var(--tw-gradient-stops));
+		background-position: var(--under-start-position) var(--under-start-position);
+	}
+
+	@keyframes ScrollGradientXY {
+		0% {
+			background-position: calc(150% + var(--under-start-position))
+				calc(150% + var(--under-start-position));
+		}
+		100% {
+			background-position: calc(-150% + var(--under-start-position))
+				calc(-150% + var(--under-start-position));
+		}
+	}
+
+	.levity {
+		--elevate-height: 8px;
+		--tw-translate-x: calc(var(--elevate-height) * -1);
+		--tw-translate-y: calc(var(--elevate-height) * -1);
 	}
 }

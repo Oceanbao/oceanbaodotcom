@@ -11,37 +11,36 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<Container>
+<Container customClass="pt-20">
 	<article class="flex-col felx-1 pt-8">
-		<a href="/blog">
-			<Box --width="94px" --translate="-4px" --border="1px" --padding="8px">
+		<Box --width="4rem" --translate="-4px" --border="2px" --padding="0px">
+			<a slot="content" href="/blog" class="surface-primary flex justify-center items-center">
 				<svg
-					slot="content"
-					class="h-4 text-primary"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
 					fill="none"
 					stroke="currentColor"
-					viewBox="0 0 35.7 16"
-					><path
-						stroke-width="3"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M11.6,2C9.2,5.7,5.8,8,2,8c3.8,0,7.2,2.3,9.6,6"
-					/><path stroke-width="3" stroke-linecap="round" d="M33.8,8h-31" /></svg
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-move-left"><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg
 				>
-			</Box>
-		</a>
+			</a>
+		</Box>
 
-		<h1 class="my-8 text-primary text-4xl font-tasaexplorer font-tasaexplorer-bold">
+		<h1 class="my-8 text-secondary text-4xl font-tasaexplorer font-tasaexplorer-bold">
 			{data.meta.title}
 		</h1>
 
-		<hgroup>
+		<hgroup class="text-base font-tasaexplorer font-tasaexplorer-regular text-secondary">
 			{#each data.meta.categories as category}
 				<span>&num;{category}</span>
 			{/each}
 		</hgroup>
 
-		<p class="font-tasaorbiter text-primary text-xl font-tasaorbiter-regular mb-4">
+		<p class="font-tasaorbiter text-secondary text-xl font-tasaorbiter-regular mb-4">
 			{data.meta.description}
 		</p>
 
@@ -50,14 +49,12 @@
 		</Box>
 
 		<div
-			class="mt-8 mx-auto max-w-3xl font-tasaexplorer text-primary text-base font-tasaexplorer-regular [&>p]:mb-4"
+			class="mt-8 mx-auto max-w-3xl font-tasaexplorer text-secondary text-base font-tasaexplorer-regular [&>p]:mb-4"
 		>
 			<svelte:component this={data.content} />
 		</div>
 	</article>
 </Container>
-
-<div class="flex-col flex-1 pt-8" />
 
 <style>
 	article :global(pre) {

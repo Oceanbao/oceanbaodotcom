@@ -6,7 +6,7 @@
 	export let categories: string;
 </script>
 
-<div class="p-4 bg-secondary flex flex-col">
+<div class="p-4 surface-primary flex flex-col">
 	<div class="flex-grow-0 flex-shrink-0 lg:mr-16 hidden lg:block">
 		<img
 			class="w-48 aspect-square object-cover"
@@ -29,20 +29,23 @@
 					alt=""
 				/>
 			</div>
-			<div class="inline-flex flex-col items-end">
-				<div
-					class="border border-primary text-primary rounded px-2 py-1 uppercase inline-block mb-3"
-				>
+			<div
+				class="
+        inline-flex flex-col items-end"
+			>
+				<div class="border border-brand-secondary rounded px-2 py-1 uppercase inline-block mb-3">
 					{categories}
 				</div>
-				<div class="flex-auto self-end text-left text-primary">{date} / {slug} / 13 Min Read</div>
+				<div class="flex-auto self-end text-left">
+					{date} / {slug} / 13 Min Read
+				</div>
 			</div>
 		</div>
 		<div>
-			<div class="lead-medium normal-case font-sans mb-4 text-primary">
+			<div class="lead-medium normal-case font-sans mb-4">
 				{title}
 			</div>
-			<div class="lead-small normal-case font-sans mb-4 text-primary">
+			<div class="lead-small normal-case font-sans mb-4">
 				{description}
 			</div>
 			<div class="leading-6">

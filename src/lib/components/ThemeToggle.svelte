@@ -8,16 +8,16 @@
 <button on:click={toggleTheme} aria-label="Toggle theme" class:headerOn={$headerOn}>
 	{#if $theme === 'dark'}
 		<div in:fly={{ y: 10 }}>
-			<Sun />
+			<Moon />
 		</div>
 	{:else}
 		<div in:fly={{ y: -10 }}>
-			<Moon />
+			<Sun />
 		</div>
 	{/if}
 </button>
 
-<style>
+<style lang="postcss">
 	button {
 		padding: 0;
 		font-weight: inherit;
@@ -25,16 +25,5 @@
 		border: none;
 		box-shadow: none;
 		overflow: hidden;
-	}
-
-	button > * {
-		display: flex;
-		gap: 2rem;
-		color: var(--color-primary);
-	}
-	button.headerOn > * {
-		display: flex;
-		gap: 2rem;
-		color: var(--color-secondary);
 	}
 </style>
