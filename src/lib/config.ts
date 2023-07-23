@@ -1,5 +1,5 @@
-import { dev } from "$app/environment";
+import { dev } from '$app/environment';
 
-export const title = 'TASA'
-export const description = 'TASA the future of space exploration.'
-export const url = dev ? 'http://localhost:5173/' : 'https://oceanbao.com'
+export const title = 'oceanbao';
+export const description = 'Personal website of Ocean Bao.';
+export const url = dev ? 'http://localhost:5173/' : 'https://oceanbao.com';

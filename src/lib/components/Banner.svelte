@@ -5,6 +5,8 @@
 	import ThemeToggle from './ThemeToggle.svelte';
 	import { headerOn } from '$lib/store';
 
+	import { actionClickOutside } from '$lib/utils';
+
 	let currentRoute = $page.route;
 	let lastY = 0;
 	let currentY = 0;
@@ -26,6 +28,10 @@
 		}
 		lastY = currentY <= 0 ? 0 : currentY;
 	}
+
+	function handleClickOutsideCB() {
+		$headerOn = false;
+	}
 </script>
 
 <svelte:window bind:scrollY={currentY} on:scroll={handleScroll} />
@@ -33,32 +39,36 @@
 <header
 	class="{$headerOn
 		? 'surface-secondary'
-		: 'surface-primary'} fixed top-0 left-0 w-screen flex flex-col z-30 transition-colors duration-200 ease-in-out"
+		: 'surface-primary'} fixed top-0 left-0 w-screen flex flex-col z-30"
 	class:slide-in={isScrollUp}
 	class:slide-out={currentY !== 0 && !isScrollUp}
+	use:actionClickOutside={{ handleClickOutsideCB }}
 >
 	<div
 		class="flex justify-between py-2 px-4 {$headerOn
 			? 'border-solid border-b border-brand-primary'
 			: 'border-b-2 border-solid border-brand-secondary'}"
 	>
-		<a href="/"><img src="/oblogo-circle.png" alt="logo" width="48px" height="48px" /></a>
+		<a href="/"><img src="/oblogo-min-circle.png" alt="logo" width="48px" height="48px" /></a>
 		<ThemeToggle />
 		<button on:click={toggleHeader}><IconMenu open={$headerOn} /></button>
 	</div>
 
 	{#if $headerOn}
-		<nav class="surface-secondary flex flex-col px-4" transition:slide>
-			<a class="py-4" href="/blog">Blog</a>
-			<a class="py-4" href="/blog">News</a>
-			<a class="py-4" href="/blog">Something</a>
+		<nav
+			class="surface-secondary py-4 flex flex-col items-end px-4"
+			transition:slide={{ duration: 500 }}
+		>
+			<a class="py-4 text-xl mr-4" href="/blog">blog</a>
+			<a class="py-4 text-xl mr-4" href="/blog">news</a>
+			<a class="py-4 text-xl mr-4" href="/blog">something</a>
 		</nav>
 	{/if}
 </header>
 
 <style lang="postcss">
 	.slide-in {
-		animation: slide-in 0.5s forwards;
+		animation: slide-in 300ms forwards;
 	}
 
 	@keyframes slide-in {
@@ -71,7 +81,7 @@
 	}
 
 	.slide-out {
-		animation: slide-out 0.5s forwards;
+		animation: slide-out 300ms forwards;
 	}
 
 	@keyframes slide-out {

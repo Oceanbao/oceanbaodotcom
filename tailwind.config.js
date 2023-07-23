@@ -26,5 +26,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require('./variableFontPlugin.js')]
+	plugins: [require('./src/lib/variableFontPlugin.ts')]
 };

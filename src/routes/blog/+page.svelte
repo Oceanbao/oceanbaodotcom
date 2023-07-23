@@ -4,7 +4,6 @@
 	import Box from '$lib/components/Box.svelte';
 	import CardBlog from '$lib/components/CardBlog.svelte';
 	import Container from '$lib/components/Container.svelte';
-	import Button from '$lib/components/Button.svelte';
 
 	export let data;
 
@@ -15,7 +14,7 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<Container customClass="pt-20">
+<Container customClass="pt-6 px-6">
 	<h2 class="text-secondary my-12 text-5xl uppercase font-tasaexplorer font-tasaexplorer-bold">
 		Blog
 	</h2>
@@ -27,15 +26,6 @@
 			Break free from manual work to run locally, costly shared test environments, and tedious
 			Terraform.
 		</p>
-
-		<div class="flex justify-between mt-6">
-			<Box --width="128px" --translate="-4px" --border="0px" --padding="0px">
-				<Button slot="content">Get Started</Button>
-			</Box>
-			<Box --width="128px" --translate="-4px" --border="0px" --padding="0px">
-				<Button slot="content" variant="secondary">Get Started</Button>
-			</Box>
-		</div>
 	</div>
 
 	<div class="flex-1 flex-col mt-12">

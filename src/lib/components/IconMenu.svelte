@@ -9,13 +9,13 @@
 	<div
 		class="w-8 h-[2px] my-[4px] pb-0 pr-0 {open
 			? 'surface-primary'
-			: 'surface-secondary'} transition duration-100 ease-in-out"
+			: 'surface-secondary'} transition duration-300 ease-in-out"
 		class:down
 	/>
 	<div
 		class="w-8 h-[2px] my-[4px] pb-0 pr-0 {open
 			? 'surface-primary'
-			: 'surface-secondary'} transition duration-100 ease-in-out"
+			: 'surface-secondary'} transition duration-300 ease-in-out"
 		class:up
 	/>
 </div>

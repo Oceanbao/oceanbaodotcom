@@ -11,7 +11,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<Container customClass="pt-20">
+<Container customClass="px-6">
 	<article class="flex-col felx-1 pt-8">
 		<Box --width="4rem" --translate="-4px" --border="2px" --padding="0px">
 			<a slot="content" href="/blog" class="surface-primary flex justify-center items-center">

@@ -1,6 +1,6 @@
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
 
-module.exports = plugin(function ({ addUtilities }) {
+const variableFontPlugin = plugin(function ({ addUtilities }) {
 	addUtilities({
 		'.font-tasaexplorer-regular': {
 			fontVariationSettings: '"wght" 400, "opsz" 8'
@@ -34,3 +34,5 @@ module.exports = plugin(function ({ addUtilities }) {
 		}
 	});
 });
+
+export default variableFontPlugin;
