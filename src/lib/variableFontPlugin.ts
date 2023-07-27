@@ -31,6 +31,42 @@ const variableFontPlugin = plugin(function ({ addUtilities }) {
 		},
 		'.font-tasaorbiter-black': {
 			fontVariationSettings: '"wght" 900, "opsz" 60'
+		},
+		'.font-opensans-light': {
+			fontVariationSettings: '"wght" 300'
+		},
+		'.font-opensans-regular': {
+			fontVariationSettings: '"wght" 400'
+		},
+		'.font-opensans-medium': {
+			fontVariationSettings: '"wght" 500'
+		},
+		'.font-opensans-semibold': {
+			fontVariationSettings: '"wght" 600'
+		},
+		'.font-opensans-bold': {
+			fontVariationSettings: '"wght" 700'
+		},
+		'.font-opensans-extrabold': {
+			fontVariationSettings: '"wght" 800'
+		},
+		'.font-opensans-light-italic': {
+			fontVariationSettings: '"wght" 300, "ital" 1'
+		},
+		'.font-opensans-regular-italic': {
+			fontVariationSettings: '"wght" 400, "ital" 1'
+		},
+		'.font-opensans-medium-italic': {
+			fontVariationSettings: '"wght" 500, "ital" 1'
+		},
+		'.font-opensans-semibold-italic': {
+			fontVariationSettings: '"wght" 600, "ital" 1'
+		},
+		'.font-opensans-bold-italic': {
+			fontVariationSettings: '"wght" 700, "ital" 1'
+		},
+		'.font-opensans-extrabold-italic': {
+			fontVariationSettings: '"wght" 800, "ital" 1'
 		}
 	});
 });

@@ -21,10 +21,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				tasaexplorer: ['TASA Explorer', 'sans-serif'],
-				tasaorbiter: ['TASA Orbiter', 'sans-serif']
+				brand: ['Open Sans', 'sans-serif']
 			}
 		}
 	},
-	plugins: [require('./src/lib/variableFontPlugin.ts')]
+	plugins: [require('./src/lib/variableFontPlugin.ts'), require('@tailwindcss/typography')]
 };

@@ -15,14 +15,12 @@
 </svelte:head>
 
 <Container customClass="pt-6 px-6">
-	<h2 class="text-secondary my-12 text-5xl uppercase font-tasaexplorer font-tasaexplorer-bold">
-		Blog
-	</h2>
+	<h2 class="text-secondary my-12 text-5xl font-brand font-bold">blog</h2>
 	<div class="mt-6 flex-1 justify-between items-start">
-		<p class="font-tasaorbiter text-secondary text-lg font-tasaorbiter-medium mb-4">
+		<p class="font-brand text-secondary text-lg font-medium mb-4">
 			Encore orchestrates infrastructure for seamless development, from local to cloud.
 		</p>
-		<p class="font-tasaorbiter text-base text-secondary font-tasaorbiter-regular">
+		<p class="font-brand text-base text-secondary font-normal">
 			Break free from manual work to run locally, costly shared test environments, and tedious
 			Terraform.
 		</p>

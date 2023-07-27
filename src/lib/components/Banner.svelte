@@ -56,12 +56,10 @@
 
 	{#if $headerOn}
 		<nav
-			class="surface-secondary py-4 flex flex-col items-end px-4"
+			class="surface-secondary py-4 flex flex-col items-end px-4 font-brand font-medium"
 			transition:slide={{ duration: 500 }}
 		>
 			<a class="py-4 text-xl mr-4" href="/blog">blog</a>
-			<a class="py-4 text-xl mr-4" href="/blog">news</a>
-			<a class="py-4 text-xl mr-4" href="/blog">something</a>
 		</nav>
 	{/if}
 </header>

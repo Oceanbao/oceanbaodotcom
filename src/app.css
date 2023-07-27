@@ -62,6 +62,16 @@ html {
 			src: url('/fonts/TASAOrbiterVF.woff2') format('woff2-variations');
 		}
 	}
+
+	@supports (font-variation-settings: normal) {
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 300 800;
+			font-display: swap;
+			src: url('/fonts/OpenSans-Regular.woff2') format('woff2-variations');
+		}
+	}
 }
 
 @layer utilities {

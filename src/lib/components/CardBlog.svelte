@@ -3,10 +3,10 @@
 	export let title: string;
 	export let date: string;
 	export let description: string;
-	export let categories: string;
+	export let categories: string[];
 </script>
 
-<div class="p-4 surface-primary flex flex-col">
+<div class="font-brand p-4 surface-primary flex flex-col">
 	<div class="flex-grow-0 flex-shrink-0 lg:mr-16 hidden lg:block">
 		<img
 			class="w-48 aspect-square object-cover"
@@ -37,7 +37,7 @@
 					{categories}
 				</div>
 				<div class="flex-auto self-end text-left">
-					{date} / {slug} / 13 Min Read
+					{date} / {slug}
 				</div>
 			</div>
 		</div>
@@ -47,13 +47,6 @@
 			</div>
 			<div class="lead-small normal-case font-sans mb-4">
 				{description}
-			</div>
-			<div class="leading-6">
-				<img
-					class="inline-block w-6 h-6 rounded-full mr-4"
-					src="https://encore.dev/assets/avatars/matt.jpg"
-					alt="avatar"
-				/>Ocean Bao
 			</div>
 		</div>
 	</div>

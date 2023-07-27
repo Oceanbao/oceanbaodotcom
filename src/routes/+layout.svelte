@@ -15,7 +15,7 @@
 
 <style lang="postcss">
 	:global(*) {
-		transition: background-color 600ms ease-in-out;
+		transition: background-color 300ms ease-in-out;
 	}
 
 	:global(body) {

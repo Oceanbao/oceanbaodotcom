@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Box from '$lib/components/Box.svelte';
 	import Container from '$lib/components/Container.svelte';
+	import ArrowLeft from '$lib/components/icons/ArrowLeft.svelte';
 	import { formatDate } from '$lib/utils';
 	export let data;
 </script>
@@ -15,32 +16,21 @@
 	<article class="flex-col felx-1 pt-8">
 		<Box --width="4rem" --translate="-4px" --border="2px" --padding="0px">
 			<a slot="content" href="/blog" class="surface-primary flex justify-center items-center">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					class="lucide lucide-move-left"><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg
-				>
+				<ArrowLeft />
 			</a>
 		</Box>
 
-		<h1 class="my-8 text-secondary text-4xl font-tasaexplorer font-tasaexplorer-bold">
+		<h1 class="my-8 text-brand-secondary text-4xl font-brand font-bold">
 			{data.meta.title}
 		</h1>
 
-		<hgroup class="text-base font-tasaexplorer font-tasaexplorer-regular text-secondary">
+		<hgroup class="text-base font-brand font-normal text-brand-secondary">
 			{#each data.meta.categories as category}
 				<span>&num;{category}</span>
 			{/each}
 		</hgroup>
 
-		<p class="font-tasaorbiter text-secondary text-xl font-tasaorbiter-regular mb-4">
+		<p class="font-brand text-brand-secondary text-xl font-bold mb-4">
 			{data.meta.description}
 		</p>
 
@@ -49,7 +39,17 @@
 		</Box>
 
 		<div
-			class="mt-8 mx-auto max-w-3xl font-tasaexplorer text-secondary text-base font-tasaexplorer-regular [&>p]:mb-4"
+			class="
+        prose
+        prose-headings:text-brand-secondary
+        prose-p:text-brand-secondary
+        prose-strong:text-brand-secondary
+        prose-strong:font-bold
+        prose-code:text-brand-secondary
+        prose-code:font-semibold
+        font-brand text-brand-secondary font-normal
+        my-8
+      "
 		>
 			<svelte:component this={data.content} />
 		</div>

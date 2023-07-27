@@ -21,7 +21,7 @@
           relative {style}
           h-full w-full px-6
           inline-flex justify-center items-center uppercase
-          font-tasaorbiter font-tasaorbiter-semibold
+          font-brand font-semibold
 
           transition-transform duration-100 ease-in-out
 
