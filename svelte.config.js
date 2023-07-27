@@ -33,16 +33,7 @@ const config = {
 		adapter: adapter({
 			routes: {
 				include: ['/*'],
-				exclude: [
-					'<build>',
-					'<files>',
-					'/',
-					'/__data.json',
-					'/api/posts',
-					'/blog/__data.json',
-					'/rss.xml',
-					'/blog/*'
-				]
+				exclude: ['<build>', '<files>', '/', '/__data.json', '/api/posts', '/rss.xml', '/blog/*']
 			}
 		})
 	}
