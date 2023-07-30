@@ -4,8 +4,8 @@ description: It's June, which means it's Pride Month! Let's celebrate by buildin
 date: '2023-5-3'
 categories:
   - animation
+  - css
 published: true
-layout: blog
 ---
 
 There's a lot of exciting stuff packed into this tutorial. In order to build this flag, we'll need to rely on a handful of tricks I've developed over years of experimentation. You'll learn a ton about keyframe animations, linear gradients, and more. 😄

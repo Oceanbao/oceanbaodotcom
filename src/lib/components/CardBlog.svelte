@@ -1,5 +1,6 @@
 <script lang="ts">
-	export let slug: string;
+	import { formatDate } from '$lib/utils';
+
 	export let title: string;
 	export let date: string;
 	export let description: string;
@@ -21,32 +22,25 @@
 		<!-- 	</div> -->
 		<!-- 	<div class="flex-auto self-end text-secondary text-left">{date} / {slug} / 13 Min Read</div> -->
 		<!-- </div> -->
-		<div class="flex justify-between lg:hidden mb-4">
-			<div class="flex-none inline-block pr-2">
-				<img
-					class="w-16 h-16 object-cover"
-					src="https://encore.dev/assets/blog/eda-cover1.jpg"
-					alt=""
-				/>
-			</div>
-			<div
-				class="
-        inline-flex flex-col items-end"
-			>
-				<div class="border border-brand-secondary rounded px-2 py-1 uppercase inline-block mb-3">
-					{categories}
-				</div>
-				<div class="flex-auto self-end text-left">
-					{date} / {slug}
-				</div>
-			</div>
-		</div>
 		<div>
-			<div class="lead-medium normal-case font-sans mb-4">
+			<div class="text-lg font-semibold normal-case mb-4">
 				{title}
 			</div>
-			<div class="lead-small normal-case font-sans mb-4">
+			<div class="text-sm font-normal normal-case mb-4">
 				{description}
+			</div>
+		</div>
+
+		<div class="flex justify-between items-center">
+			<div class="">
+				{formatDate(date)}
+			</div>
+			<div class="flex gap-2">
+				{#each categories as category}
+					<div class="text-xs border border-brand-secondary rounded px-2 py-1 uppercase">
+						{category}
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>

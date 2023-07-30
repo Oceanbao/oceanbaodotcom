@@ -1,13 +1,34 @@
 <script lang="ts">
 	import * as config from '$lib/config';
+	import { catsSelected } from '$lib/store.js';
 
 	import Box from '$lib/components/Box.svelte';
 	import CardBlog from '$lib/components/CardBlog.svelte';
 	import Container from '$lib/components/Container.svelte';
+	import CategorySelector from '$lib/components/CategorySelector.svelte';
 
 	export let data;
 
-	let { posts } = data;
+	let { posts, categories } = data;
+
+	let postsSelected = [...posts];
+
+	function filterPost(cats: Set<string>, postsCopied: typeof posts) {
+		if (cats.size === 0) return postsCopied;
+
+		const postsFiltered = postsCopied.filter((post) => {
+			for (const cat of post.categories) {
+				if (cats.has(cat)) {
+					return true;
+				}
+			}
+			return false;
+		});
+
+		return postsFiltered;
+	}
+
+	$: postsSelected = filterPost($catsSelected, posts);
 </script>
 
 <svelte:head>
@@ -17,22 +38,15 @@
 <Container customClass="pt-6 px-6">
 	<h2 class="text-secondary my-12 text-5xl font-brand font-bold">blog</h2>
 	<div class="mt-6 flex-1 justify-between items-start">
-		<p class="font-brand text-secondary text-lg font-medium mb-4">
-			Encore orchestrates infrastructure for seamless development, from local to cloud.
-		</p>
-		<p class="font-brand text-base text-secondary font-normal">
-			Break free from manual work to run locally, costly shared test environments, and tedious
-			Terraform.
-		</p>
+		<CategorySelector {categories} />
 	</div>
 
 	<div class="flex-1 flex-col mt-12">
-		{#each posts as post}
+		{#each postsSelected as post (post.title)}
 			<Box --width="full" --translate="-4px" --border="1px" --padding="0" customClass="mb-12">
 				<a slot="content" href="/blog/{post.slug}">
 					<CardBlog
 						title={post.title}
-						slug={post.slug}
 						categories={post.categories}
 						description={post.description}
 						date={post.date}

@@ -4,8 +4,8 @@ description: Pitfalls, gotchas, and footguns, oh my!
 date: '2023-5-1'
 categories:
   - react
+  - web
 published: true
-layout: blog
 ---
 
 A couple years ago, I was teaching React at a local coding bootcamp, and I noticed that there were a handful of things that kept catching students off guard. People kept falling into the same pits!

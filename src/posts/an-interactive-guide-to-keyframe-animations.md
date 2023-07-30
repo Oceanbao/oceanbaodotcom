@@ -4,8 +4,8 @@ description: CSS keyframe animations are awesome. They're one of the most powerf
 date: '2023-5-4'
 categories:
   - animation
+  - css
 published: true
-layout: blog
 ---
 
 But they're also often misunderstood. They're a bit quirky, and if you don't understand those quirks, using them can be quite frustrating.

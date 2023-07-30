@@ -112,4 +112,8 @@ html {
 		--tw-translate-x: calc(var(--elevate-height) * -1);
 		--tw-translate-y: calc(var(--elevate-height) * -1);
 	}
+
+	.focus-ring {
+		@apply ring-offset-4 ring-[color:var(--theme-secondary)] transition duration-300 focus-within:outline-none focus-within:ring-2 hover:ring-2 focus:outline-none focus:ring-2 disabled:ring-0 group-hover:ring-2 group-focus:ring-2 ring-offset-[color:var(--theme-primary)];
+	}
 }

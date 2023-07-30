@@ -4,8 +4,9 @@ description: Flexbox is a remarkably powerful layout mode. When we truly underst
 date: '2023-5-6'
 categories:
   - css
+  - ui
 published: true
-layout: blog
+aboveFoldImage: 'https://encore.dev/assets/blog/eda-cover1.jpg'
 ---
 
 This demo is heavily inspired by Adam Argyle’s incredible “4 layouts for the price of 1” codepen. It uses no media/container queries. Instead of setting arbitrary breakpoints, it uses fluid principles to create a layout that flows seamlessly.

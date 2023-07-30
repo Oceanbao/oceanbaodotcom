@@ -4,8 +4,8 @@ description: In a Next.js application I'm working on, I have an "admin" page, wh
 date: '2023-5-6'
 categories:
   - nextjs
+  - web
 published: true
-layout: blog
 ---
 
 One of my favourite features about Next.js is that individual routes can opt-in to server-side rendering. While I tend to be a pretty big advocate for static generation, this is a perfect use-case for server-side rendering; I can fetch and inject the database data on first render, simplifying my front-end code.

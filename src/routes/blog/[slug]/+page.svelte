@@ -3,13 +3,14 @@
 	import Container from '$lib/components/Container.svelte';
 	import ArrowLeft from '$lib/components/icons/ArrowLeft.svelte';
 	import { formatDate } from '$lib/utils';
+
 	export let data;
 </script>
 
 <svelte:head>
-	<title>{data.meta.title}</title>
+	<title>{data.frontmatter.title}</title>
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:title" content={data.frontmatter.title} />
 </svelte:head>
 
 <Container customClass="px-6">
@@ -21,22 +22,36 @@
 		</Box>
 
 		<h1 class="my-8 text-brand-secondary text-4xl font-brand font-bold">
-			{data.meta.title}
+			{data.frontmatter.title}
 		</h1>
 
-		<hgroup class="text-base font-brand font-normal text-brand-secondary">
-			{#each data.meta.categories as category}
-				<span>&num;{category}</span>
-			{/each}
-		</hgroup>
-
-		<p class="font-brand text-brand-secondary text-xl font-bold mb-4">
-			{data.meta.description}
+		<p class="font-brand text-brand-secondary text-xl font-semibold mb-4">
+			{data.frontmatter.description}
 		</p>
 
-		<Box --width="100%" --translate="-6px" --border="1px" --padding="0" active={false}>
-			<img slot="content" src="https://encore.dev/assets/blog/eda-cover1.jpg" alt="cover" />
-		</Box>
+		<div class="flex justify-between items-center">
+			<div class="flex gap-2 my-4">
+				{#each data.frontmatter.categories as category}
+					<div class="text-base border border-brand-secondary rounded px-2 py-1 uppercase">
+						<span class="bg-brand-primary">{category}</span>
+					</div>
+				{/each}
+			</div>
+			<span>{formatDate(data.frontmatter.date)}</span>
+		</div>
+
+		{#if data.frontmatter.aboveFoldImage}
+			<Box
+				--width="100%"
+				--translate="-6px"
+				--border="1px"
+				--padding="0"
+				active={false}
+				customClass="my-4"
+			>
+				<img slot="content" src="https://encore.dev/assets/blog/eda-cover1.jpg" alt="cover" />
+			</Box>
+		{/if}
 
 		<div
 			class="

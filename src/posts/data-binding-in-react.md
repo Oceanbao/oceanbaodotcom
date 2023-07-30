@@ -4,8 +4,8 @@ description: So you have a bit of state in React, and you want to sync it with a
 date: '2023-5-2'
 categories:
   - react
+  - web
 published: true
-layout: blog
 ---
 
 Well, it depends on the type of form control: text inputs, selects, checkboxes, and radio buttons all work a little bit differently.

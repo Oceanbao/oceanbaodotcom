@@ -5,7 +5,6 @@ date: '2023-5-5'
 categories:
   - css
 published: true
-layout: blog
 ---
 
 Which one should we use? It might seem like an inconsequential decision, but there are some pretty important differences between them. And, honestly, I think most of us are prioritizing the wrong things. 😅
