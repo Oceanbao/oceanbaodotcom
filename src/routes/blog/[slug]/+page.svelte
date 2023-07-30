@@ -13,8 +13,8 @@
 	<meta property="og:title" content={data.frontmatter.title} />
 </svelte:head>
 
-<Container customClass="px-6">
-	<article class="flex-col felx-1 pt-8">
+<Container customClass="px-6 lg:px-32">
+	<article class="flex flex-col flex-1 pt-8 lg:px-32">
 		<Box --width="4rem" --translate="-4px" --border="2px" --padding="0px">
 			<a slot="content" href="/blog" class="surface-primary flex justify-center items-center">
 				<ArrowLeft />
@@ -63,7 +63,7 @@
         prose-code:text-brand-secondary
         prose-code:font-semibold
         font-brand text-brand-secondary font-normal
-        my-8
+        my-8 mx-auto
       "
 		>
 			<svelte:component this={data.content} />

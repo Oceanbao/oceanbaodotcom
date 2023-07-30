@@ -45,13 +45,19 @@
 	use:actionClickOutside={{ handleClickOutsideCB }}
 >
 	<div
-		class="flex justify-between py-2 px-4 {$headerOn
+		class="flex justify-between py-2 px-4 lg:px-32 {$headerOn
 			? 'border-solid border-b border-brand-primary'
 			: 'border-b-2 border-solid border-brand-secondary'}"
 	>
 		<a href="/"><img src="/oblogo-min-circle.png" alt="logo" width="48px" height="48px" /></a>
+
 		<ThemeToggle />
-		<button on:click={toggleHeader}><IconMenu open={$headerOn} /></button>
+
+		<button class="lg:hidden" on:click={toggleHeader}><IconMenu open={$headerOn} /></button>
+
+		<nav class="items-center font-brand font-medium hidden lg:flex">
+			<a class="text-xl" href="/blog">blog</a>
+		</nav>
 	</div>
 
 	{#if $headerOn}

@@ -35,21 +35,22 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<Container customClass="pt-6 px-6">
+<Container customClass="pt-6 px-6 lg:px-32 h-screen overflow-auto">
 	<h2 class="text-secondary my-12 text-5xl font-brand font-bold">blog</h2>
-	<div class="mt-6 flex-1 justify-between items-start">
+	<div class="mt-6 justify-between items-start">
 		<CategorySelector {categories} />
 	</div>
 
-	<div class="flex-1 flex-col mt-12">
+	<div class="grid gap-8 grid-cols-[repeat(auto-fill,minmax(250px,1fr))] auto-rows-min my-12">
 		{#each postsSelected as post (post.title)}
-			<Box --width="full" --translate="-4px" --border="1px" --padding="0" customClass="mb-12">
+			<Box --width="100%" --height="100%" --translate="-6px" --border="1px" --padding="0">
 				<a slot="content" href="/blog/{post.slug}">
 					<CardBlog
 						title={post.title}
 						categories={post.categories}
 						description={post.description}
 						date={post.date}
+						customClass="h-full"
 					/>
 				</a>
 			</Box>

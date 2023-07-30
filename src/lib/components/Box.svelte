@@ -45,6 +45,8 @@
 	}
 
 	.front {
+		width: var(--width, 100%);
+		height: var(--height, 100%);
 		border-width: var(--border);
 		padding: var(--padding);
 	}

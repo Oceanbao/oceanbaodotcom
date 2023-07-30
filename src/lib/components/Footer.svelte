@@ -4,7 +4,7 @@
 	import Twitter from './icons/Twitter.svelte';
 </script>
 
-<footer class="grid auto-cols-fr px-6 py-12 surface-secondary gap-4 font-brand">
+<footer class="grid auto-cols-fr px-6 surface-secondary gap-4 font-brand h-[15vh] lg:px-32">
 	<div class="flex items-center justify-between">
 		<div class="flex items-center gap-2">
 			<a href="/"><img src="/oblogo-min-circle.png" alt="logo" width="48px" height="48px" /></a>

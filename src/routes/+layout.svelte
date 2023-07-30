@@ -19,7 +19,7 @@
 	}
 
 	:global(body) {
-		height: 100%;
+		min-height: 100%;
 		color: theme('colors.brand-secondary');
 		background-color: theme('colors.brand-primary');
 	}

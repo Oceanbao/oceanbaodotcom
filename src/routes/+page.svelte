@@ -2,7 +2,7 @@
 	import Container from '$lib/components/Container.svelte';
 </script>
 
-<Container customClass="pt-14 pb-10 mx-6">
+<Container customClass="mx-6 pt-20 lg:mx-32 lg:pt-60 h-screen overflow-auto">
 	<h1 class="text-5xl font-brand font-bold">
 		langue 与<br />コード
 	</h1>
