@@ -8,5 +8,5 @@
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
-	class="lucide lucide-move-left"><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg
+	class=""><path d="M6 8L2 12L6 16" /><path d="M2 12H22" /></svg
 >

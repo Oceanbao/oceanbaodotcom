@@ -25,5 +25,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require('./src/lib/variableFontPlugin.ts'), require('@tailwindcss/typography')]
+	plugins: [require('./src/lib/variableFontPlugin.ts')]
 };

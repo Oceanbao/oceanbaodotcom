@@ -56,7 +56,7 @@
 		<button class="lg:hidden" on:click={toggleHeader}><IconMenu open={$headerOn} /></button>
 
 		<nav class="items-center font-brand font-medium hidden lg:flex">
-			<a class="text-xl" href="/blog">blog</a>
+			<a class="text-xl underline-hover" href="/blog">blog</a>
 		</nav>
 	</div>
 

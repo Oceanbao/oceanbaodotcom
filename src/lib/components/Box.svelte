@@ -27,8 +27,8 @@
 </script>
 
 <div class="box relative {customClass}" class:active class:inactive>
-	<div class="back {styleBack} absolute inset-0 -z-10" />
-	<div class="front {styleFront} transition-transform duration-100 ease-in-out">
+	<div class="back {styleBack} absolute inset-0 -z-10 rounded-md" />
+	<div class="front {styleFront} transition-transform duration-100 ease-in-out rounded-md">
 		<slot name="content" />
 	</div>
 </div>

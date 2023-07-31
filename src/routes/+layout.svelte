@@ -7,7 +7,7 @@
 
 <Banner />
 
-<main class="container mx-auto mt-16">
+<main class="container min-h-screen mx-auto mt-16">
 	<slot />
 </main>
 

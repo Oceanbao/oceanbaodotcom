@@ -35,7 +35,7 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<Container customClass="pt-6 px-6 lg:px-32 h-screen overflow-auto">
+<Container customClass="pt-6 px-6 lg:px-32">
 	<h2 class="text-secondary my-12 text-5xl font-brand font-bold">blog</h2>
 	<div class="mt-6 justify-between items-start">
 		<CategorySelector {categories} />
@@ -50,7 +50,7 @@
 						categories={post.categories}
 						description={post.description}
 						date={post.date}
-						customClass="h-full"
+						customClass="h-full rounded-md"
 					/>
 				</a>
 			</Box>
