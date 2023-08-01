@@ -63,7 +63,7 @@
 			{/if}
 		</div>
 
-		<div class="article">
+		<div class="prose mx-auto prose-brand md:prose-lg lg:prose-xl">
 			<svelte:component this={data.content} />
 		</div>
 	</article>

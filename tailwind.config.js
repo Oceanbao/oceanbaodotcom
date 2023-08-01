@@ -22,8 +22,30 @@ export default {
 			},
 			fontFamily: {
 				brand: ['Open Sans', 'sans-serif']
-			}
+			},
+			typography: ({ theme }) => ({
+				brand: {
+					css: {
+						'--tw-prose-body': theme('colors.brand-secondary'),
+						'--tw-prose-headings': theme('colors.brand-secondary'),
+						'--tw-prose-lead': theme('colors.brand-secondary'),
+						'--tw-prose-links': theme('colors.brand-secondary'),
+						'--tw-prose-bold': theme('colors.brand-secondary'),
+						'--tw-prose-counters': theme('colors.brand-secondary'),
+						'--tw-prose-bullets': theme('colors.brand-secondary'),
+						'--tw-prose-hr': theme('colors.brand-secondary'),
+						'--tw-prose-quotes': theme('colors.brand-secondary'),
+						'--tw-prose-quote-borders': theme('colors.brand-secondary'),
+						'--tw-prose-captions': theme('colors.brand-secondary'),
+						'--tw-prose-code': theme('colors.brand-secondary'),
+						'--tw-prose-pre-code': theme('colors.brand-secondary'),
+						'--tw-prose-pre-bg': theme('colors.brand-secondary'),
+						'--tw-prose-th-borders': theme('colors.brand-secondary'),
+						'--tw-prose-td-borders': theme('colors.brand-secondary')
+					}
+				}
+			})
 		}
 	},
-	plugins: [require('./src/lib/variableFontPlugin.ts')]
+	plugins: [require('@tailwindcss/typography'), require('./src/lib/variableFontPlugin.ts')]
 };
